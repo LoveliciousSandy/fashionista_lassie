@@ -1,0 +1,102 @@
+<html>
+    <head><title>contact</title>
+        <link rel="stylesheet" type="text/css" href="../styles/1style.css">
+        <style>
+
+            #d4{
+                margin-top: 40px;
+                margin-left: 200px;
+                font-size: 20px;
+            }
+            #d5{
+
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div>
+
+            <img id="logo" src="../images/l1.jpg" width="300" height="200" alt="">
+        </div>
+        <!--navbar-->
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="product.html">Tops</a></li>
+            <li><a href="dress.html">Dress</a></li>
+            <li><a href="casual.html">Casual Wear</a></li>
+            <li><a class="active" href="contact.html">Contact Us</a></li>
+        </ul>
+
+
+        <div id="d4"><h2>CONTACT</h2>
+            <p>Contact us and we'll get back to you within 24 hours.</p>
+            <p style="text-align: left">
+                Head-Office : <br>
+
+                No. 261, Highlevel Road, Nugegoda<br>
+
+                Contact no : +94 112-824641  <br>
+
+                Email : info@fashionistalassie.lk<br><br>
+
+            <div id="d5">
+                <div>
+                    <div>
+                        <input id="name" name="name" placeholder="Name" type="text" ><br><br>
+                    </div>
+                    <div >
+                        <input id="email" name="email" placeholder="Email" type="email"><br><br>
+                    </div>
+                </div>
+                <textarea id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br><br>
+                <div class="row">
+                    <div >
+                        <input type="submit" onclick="return validateform();" value="Send">
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <br>
+    <br>
+         <footer >
+        <div>
+            <img id="address" src="../images/AddressNew1.jpg">
+            <center>
+                <p>Copyright © 2018 Fashionista lassie. All rights reserved.</p>
+            </center>
+        </div>
+    </footer>
+        <script>
+            function validateform() {
+                var v3 = document.getElementById('name').value;
+                var v4 = document.getElementById('email').value;
+                var v5 = document.getElementById('comments').value;
+                if (v3 == "") {
+                    alert('Fill the Name');
+                    return false;
+                } else if (!(isNaN(v3))) {
+                    alert('Invalid Name');
+                    return false;
+                }
+                if (v4 == "") {
+                    alert('Fill the Email');
+                    return false;
+                }
+
+                if (v5 == "") {
+                    alert('Fill the Comments');
+                    return false;
+                } else
+                    (true)
+                alert('Message Send');
+                var v3 = document.getElementById('name').value = "";
+                var v4 = document.getElementById('email').value = "";
+                var v5 = document.getElementById('comments').value = "";
+            }
+
+        </script>
+    </body>
+</html>

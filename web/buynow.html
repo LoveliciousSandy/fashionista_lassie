@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Buy Now</title>
+        <link rel="stylesheet" type="text/css" href="../styles/1style.css">
+    </head>
+    <style>
+        #d2{
+            margin-top: 40px;
+            margin-left: 200px;
+            font-size: 20px;
+        }
+
+    </style>
+    <body>
+        <div>
+            <img id="logo" src="../images/l1.jpg" width="300" height="200" >
+        </div>
+        <!--navbar-->
+        <ul>
+            <li><a class="active" href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="product.html">Tops</a></li>
+            <li><a href="dress.html">Dress</a></li>
+            <li><a href="casual.html">Casual Wear</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <form action="ThankYou.html" onsubmit="return validateform();">
+            <div id="d2"><h2>Product Details</h2>
+                <label>Product Code#</label><br><br>
+                <input type="text" id="code"><br><br>
+                <label>Product Type</label><br><br>
+                <select>
+                    <option>Top</option>
+                    <option>Dress</option>
+                    <option>Casual Wear</option>
+                </select><br><br>
+                <label> Quantity </label><br><br>
+                <input type="number" id="qty"> <br><br>
+
+                <h2>Customer Details</h2>
+                <label>Customer Name</label><br><br>
+                <input type="text"  id="name1">  <input type="text" id="name2"> <br><br>
+                <label>Delivery Address</label><br><br>
+                <textarea id="add"></textarea> <br><br>
+                <label>Telephone</label><br><br>
+                <input type="text" id="tp"> <br><br>
+                <input type="checkbox" name="" value=""><label>Please contact me before delivery</label><br><br>
+                <input type="submit" value="OrderNow">
+            </div>
+        </form>
+        <br>
+    <br>
+         <footer>
+        <div>
+            <img id="address" src="../images/AddressNew1.jpg">
+            <center>
+                <p>Copyright © 2018 Fashionista lassie. All rights reserved.</p>
+            </center>
+        </div>
+    </footer>
+        <script>
+            function validateform() {
+                var v1 = document.getElementById('code').value;
+                var v2 = document.getElementById('qty').value;
+                var v3 = document.getElementById('name1').value;
+                var v4 = document.getElementById('name2').value;
+                var v5 = document.getElementById('add').value;
+                var v6 = document.getElementById('tp').value;
+
+
+                if (v1 == "") {
+                    alert('An Empty Feild');
+                    return false;
+                } else if (isNaN(v1)) {
+                    alert('Invalid code');
+                    return false;
+                }
+                if (v2 == "") {
+                    alert('An Empty Feild');
+                    return false;
+                } else if (v2 < 0) {
+                    alert('Invalid QTY');
+                    return false;
+                }
+                if (v3 == "" || v4 == "") {
+                    alert('Fill the Name');
+                    return false;
+                } else if (!(isNaN(v3) && isNaN(v4))) {
+                    alert('Invalid Name');
+                    return false;
+                }
+                if (v5 == "") {
+                    alert('Fill the Address');
+                    return false;
+                }
+                if (v6 == "") {
+                    alert('Fill the Telephone No');
+                    return false;
+
+                } else if (isNaN(v6)) {
+                    alert('Invalid Telephone No');
+                    return false;
+
+                }
+
+            }
+        </script>
+    </body>
+</html>
